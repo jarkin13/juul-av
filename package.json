@@ -1,0 +1,19 @@
+{
+  "name": "juul-age-verification",
+  "version": "1.0.0",
+  "description": "Authentication app that validates the user's age with the JUUL API during registration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarkin13/juul-av.git"
+  },
+  "author": "Jamie Arkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarkin13/juul-av/issues"
+  },
+  "homepage": "https://github.com/jarkin13/juul-av#readme"
+}
