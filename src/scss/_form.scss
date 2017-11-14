@@ -1,0 +1,19 @@
+.form-control {
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:focus:required:invalid {
+    border: 1px solid $red;
+  }
+}
+
+.address-input {
+  width: 100%;
+
+  #address {
+    width: 100%;
+  }
+}
