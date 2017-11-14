@@ -39,11 +39,11 @@ class Form extends Component {
   }
 
   handleUserInput(e) {
-    const placeholder = e.target.placeholder;
     const name = e.target.name;
     const value = e.target.value;
+    const inputName = this.refs[name].props.inputName
     this.setState({[name]: value}, () => {
-      this.handleValidateField(name, value, placeholder);
+      this.handleValidateField(name, value, inputName);
     });
   }
 
@@ -69,7 +69,7 @@ class Form extends Component {
       });
   }
 
-  handleValidateField(field, value, placeholder) {
+  handleValidateField(field, value, inputName) {
     let isValid = this.state.fieldValid[field];
     let errorMsg = this.state.formErrors[field];
     let fieldData = {
@@ -80,7 +80,7 @@ class Form extends Component {
     if( field === 'address' ) value = value.value;
 
     isValid = this.isNotEmpty(value);
-    errorMsg = isValid ? '' : `${placeholder} is required.`;
+    errorMsg = isValid ? '' : `${inputName} is required.`;
 
     switch(field) {
       case 'dob':
@@ -172,8 +172,25 @@ class Form extends Component {
       <div className="container">
         <form id="becomeLeader">
           <div className="row">
-            <TextField input="first" inputName="First Name" type="text" groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.first)}`} id="first" placeholder="First Name" value={this.state.first} handleUserInput={this.handleUserInput} />
-            <TextField input="last" inputName="Last Name" type="text" groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.last)}`} id="last" placeholder="Last Name" value={this.state.last} handleUserInput={this.handleUserInput} />
+            <TextField
+              input="first"
+              inputName="First Name"
+              type="text"
+              groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.first)}`}
+              id="first"
+              placeholder="First Name"
+              value={this.state.first}
+              handleUserInput={this.handleUserInput}
+              ref="first" />
+            <TextField
+              input="last"
+              inputName="Last Name"
+              type="text" groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.last)}`}
+              id="last"
+              placeholder="Last Name"
+              value={this.state.last}
+              handleUserInput={this.handleUserInput}
+              ref="last" />
           </div>
           <div className="row">
             <FormError formError={this.state.formErrors.first} formClass={`col-12 col-md ${this.errorClass(this.state.formErrors.first)}-msg`} />
@@ -183,7 +200,11 @@ class Form extends Component {
             <div className={`form-group col-12 col-md ${this.errorClass(this.state.formErrors.address)}`} >
               <label htmlFor="address">Address</label>
               <div className="input-group">
-                <Autocomplete value={this.state.address.value} onChange={(event) => this.handleUserInput(event)} />
+                <Autocomplete
+                  value={this.state.address.value}
+                  onChange={(event) => this.handleUserInput(event)}
+                  inputName="Address"
+                  ref="address" />
               </div>
             </div>
           </div>
@@ -191,8 +212,28 @@ class Form extends Component {
             <FormError formError={this.state.formErrors.address} formClass={`col-12 col-md ${this.errorClass(this.state.formErrors.address)}-msg`} />
           </div>
           <div className="row">
-            <TextField input="dob" inputName="Date of Birth" options={dobOptions} type="text" groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.dob)}`} id="dob" placeholder="MM/DD/YYYY" value={this.state.dob} handleUserInput={this.handleUserInput} max="10" />
-            <TextField input="ssn" inputName="SSN" type="text" options={ssnOptions} groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.dob)}`} id="ssn" placeholder="XXX-XX-XXXX" value={this.state.ssn} handleUserInput={this.handleUserInput} min="11" max="11" />
+            <TextField
+              input="dob"
+              inputName="Date of Birth"
+              options={dobOptions}
+              type="text"
+              groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.dob)}`}
+              id="dob"
+              placeholder="MM/DD/YYYY"
+              value={this.state.dob}
+              handleUserInput={this.handleUserInput} max="10"
+              ref="dob" />
+            <TextField
+              input="ssn"
+              inputName="SSN"
+              type="text"
+              options={ssnOptions}
+              groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.dob)}`}
+              id="ssn"
+              placeholder="XXX-XX-XXXX"
+              value={this.state.ssn}
+              handleUserInput={this.handleUserInput} min="11" max="11"
+              ref="ssn" />
           </div>
           <div className="row">
             <FormError formError={this.state.formErrors.dob} formClass={`col-12 col-md ${this.errorClass(this.state.formErrors.dob)}-msg`} />
