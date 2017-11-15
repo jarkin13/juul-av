@@ -8,11 +8,11 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "watch-scss": "gulp watch:scss",
+    "watch-css": "gulp watch:scss",
+    "build-css": "node-sass-chokidar --include-path ./src/scss --include-path ./node_modules src/scss -o src/",
     "start-js": "react-scripts start --verbose",
-    "start-dev": "npm-run-all -p watch-scss start-js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
