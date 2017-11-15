@@ -23,7 +23,7 @@
     "build-css": "node-sass-chokidar --include-path ./src/scss --include-path ./node_modules src/scss -o public/css/",
     "start": "npm-run-all -p watch-css start-js",
     "start-js": "react-scripts start --verbose",
-    "start-dev": "npm-run-all -p watch-css start-js",
+    "start-dev": "npm-run-all -p watch-scss start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
