@@ -16,15 +16,23 @@
       height: 70px;
       padding: 15px;
       z-index: 999;
+      background: #000000;
+      color: #ffffff;
+      border: 0;
     }
 
     .modal-body {
-      margin-top: -280px;
-      transition: all .3s linear;
+      color: $gray-300;
+      background: #000000;
+      margin-top: -350px;
+      transition: margin .3s linear;
     }
 
     .container {
-      width: 60%;
+      @include media-breakpoint-up(md) {
+        width: 60%;
+        max-width: 750px;
+      }
     }
   }
 
@@ -32,8 +40,22 @@
     .modal-content {
       .modal-body {
         margin-top: -70px;
-        transform: translateX(0);
+        transform: translate(0);
       }
+    }
+  }
+
+  .close {
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: normal;
+
+    &:focus,
+    &:active,
+    &:hover,
+    &:visited {
+      outline: 0;
+      box-shadow: none;
     }
   }
 }

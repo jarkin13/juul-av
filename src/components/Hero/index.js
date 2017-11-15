@@ -1,16 +1,15 @@
 import React from 'react';
-import HeroImage from './images/mango.png';
+import HeroImage from './images/mango.jpg';
 
 const Hero = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-md-6">
-        <h1>Mango is Back</h1>
-        <p>Experience Intensely<br/>Satisfying Vapor</p>
-        <a href="https://www.juulvapor.com/shop-pods/" role="button" className="btn btn-primary">Try Now</a>
-        <div className="align-self-end">Now available for Auto-Ship</div>
+  <div className="container hero">
+    <div className="row align-items-center">
+      <div className="col-md-6 hero--content">
+        <h1>Mango</h1>
+        <p>It's back.</p>
+        <a href="https://www.juulvapor.com/shop-pods/" role="button" className="btn btn-primary">Buy Now</a>
       </div>
-      <div className="col-md-6">
+      <div className="col-md-6 hero--image">
         <img src={HeroImage} />
       </div>
     </div>

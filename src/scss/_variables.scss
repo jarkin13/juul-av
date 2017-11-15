@@ -1,2 +1,24 @@
+// OPTIONS
+$enable-rounded: false;
+
+// COLORS
+$blue: #00c2da;
+$orange: #f05a3f;
+$dark-orange: #ee4627;
+$gray: #e9eef1;
+
+$primary: $orange;
+
+
+// BUTTONS
+$btn-border-radius: 0;
+
+// LINKS
+$link-color: #000000;
+
 // FONTS
-$font-family-base: "proxima-nova", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base: 'proxima-nova', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// FORMS
+$input-btn-padding-y: .6rem;
+$input-btn-padding-x: 4rem;

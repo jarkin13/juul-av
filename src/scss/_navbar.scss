@@ -1,0 +1,30 @@
+.navbar {
+  padding: 1.5rem 2.5rem;
+  background-color: $gray;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-size: .8rem;
+  letter-spacing: 1px;
+
+  .nav-item > .nav-link {
+    padding-right: .8rem;
+    padding-left: .8rem;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.btn {
+      text-transform: uppercase;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      margin-left: 1rem;
+      background-color: #000000;
+
+      &:hover {
+        color: #fff;
+        background-color: $gray-800;
+      }
+    }
+  }
+}

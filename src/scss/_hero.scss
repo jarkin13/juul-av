@@ -1,0 +1,32 @@
+.hero {
+  text-align: center;
+
+  h1 {
+    text-transform: lowercase;
+    color: $orange;
+    font-weight: 100;
+    line-height: normal;
+    -webkit-margin-before: 0;
+    font-size: 6rem;
+    letter-spacing: 6px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 8rem;
+      letter-spacing: 8px;
+    }
+  }
+
+  &--image {
+    padding-top: 2rem;
+  }
+
+  &--content {
+    margin-top: -2rem;
+    font-weight: 400;
+
+    p {
+      font-size: 2rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+}

@@ -41,7 +41,7 @@ const Header = () => (
           <Link name="Shop" link="https://www.juulvapor.com/shop-juul" />
           <Link name="Store Locator" link="https://www.juulvapor.com/locator/" />
           <Link name="Support" link="https://support.juulvapor.com/" />
-          <Button btnClass="btn-link" name="Sign Up" data-toggle="modal" data-target="#registerModal" />
+          <Button btnClass="btn btn-dark" name="Sign Up" data-toggle="modal" data-target="#registerModal" />
         </ul>
       </div>
     </div>

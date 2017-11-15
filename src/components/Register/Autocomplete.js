@@ -97,7 +97,6 @@ class Autocomplete extends Component {
     const inputProps = {
       value: this.props.value,
       onChange: this.onInputChange,
-      placeholder: 'Search Address',
       id: 'address',
       required: true
     }

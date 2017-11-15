@@ -1,0 +1,17 @@
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:focus,
+  &:active,
+  &:hover,
+  &:visited {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &-primary {
+    border-color: $dark-orange;
+  }
+}
