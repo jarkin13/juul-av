@@ -11,7 +11,7 @@ window.$ = $;
 window.Tether = Tether;
 window.Popper = Popper;
 
-const { Modal, Collapse } = require('bootstrap');
+const bootstrap = require('bootstrap');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
