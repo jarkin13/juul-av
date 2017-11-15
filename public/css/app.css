@@ -7653,6 +7653,9 @@ img {
   color: #dc3545;
   margin-bottom: 1.5rem; }
 
+.modal-open {
+  position: fixed; }
+
 .modal .modal-dialog {
   margin: 0;
   height: 100%; }
