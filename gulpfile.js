@@ -2,6 +2,7 @@ const gulp        = require('gulp');
 const run         = require('gulp-run');
 const del         = require('del');
 const sourcemaps  = require('gulp-sourcemaps');
+const concat      = require('gulp-concat');
 
 // SASS HELPERS
 const sass         = require('gulp-sass');
@@ -11,6 +12,7 @@ const stylelint    = require('stylelint');
 const postscss     = require('postcss-scss');
 const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+
 // BUILD
 gulp.task('build:dev', ['clean', 'scss']);
 gulp.task('build:prod', ['clean', 'min:scss']);
@@ -20,7 +22,7 @@ gulp.task('clean', ['clean:dev', 'clean:prod']);
 
 gulp.task('clean:dev', () => {
   del('public/css/app.css.map');
-  del('app/css/app.css');
+  del('public/css/app.css');
 });
 
 gulp.task('clean:prod', () => {
@@ -58,7 +60,7 @@ gulp.task('min:scss', ['lint:scss'], () => {
   return gulp.src('src/scss/*.scss')
     .pipe(sass({
       includePaths: [
-        __dirname + '/node_modules/bootstrap/scss'
+        __dirname + '/node_modules/'
       ]
     }).on('error', sass.logError))
     .pipe(postcss(
