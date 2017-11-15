@@ -8,7 +8,7 @@ class RegisterModal extends Component {
         <div className="modal" id="registerModal" tabIndex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
-              <div className="modal-header sticky-top d-sm-flex align-items-sm-center">
+              <div className="modal-header d-sm-flex align-items-sm-center">
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">x</button>
               </div>
               <div className="modal-body d-sm-flex align-items-sm-center">
