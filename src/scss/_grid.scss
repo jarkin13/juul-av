@@ -1,0 +1,15 @@
+.col-mobile {
+  display: block;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.col-web {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}

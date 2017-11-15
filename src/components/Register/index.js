@@ -232,6 +232,9 @@ class Form extends Component {
               value={this.state.first}
               handleUserInput={this.handleUserInput}
               ref="first" />
+            <div className="col-12 col-mobile">
+              <FormError formError={this.state.formErrors.first} formClass={`msg-${this.fieldErrorClass(this.state.formErrors.first)}`} />
+            </div>
             <TextField
               input="last"
               inputName="Last Name"
@@ -240,10 +243,13 @@ class Form extends Component {
               value={this.state.last}
               handleUserInput={this.handleUserInput}
               ref="last" />
+            <div className="col-12 col-mobile">
+              <FormError formError={this.state.formErrors.last} formClass={`msg-${this.fieldErrorClass(this.state.formErrors.last)}`} />
+            </div>
           </div>
           <div className="row">
-            <FormError formError={this.state.formErrors.first} formClass={`col-12 col-md msg-${this.fieldErrorClass(this.state.formErrors.first)}`} />
-            <FormError formError={this.state.formErrors.last} formClass={`col-12 col-md msg-${this.fieldErrorClass(this.state.formErrors.last)}`} />
+            <FormError formError={this.state.formErrors.first} formClass={`col-12 col-md col-web msg-${this.fieldErrorClass(this.state.formErrors.first)}`} />
+            <FormError formError={this.state.formErrors.last} formClass={`col-12 col-md col-web msg-${this.fieldErrorClass(this.state.formErrors.last)}`} />
           </div>
           <div className="row">
             <div className={`form-group col-12 col-md ${this.fieldErrorClass(this.state.formErrors.address)}`} >
@@ -256,9 +262,12 @@ class Form extends Component {
                   ref="address" />
               </div>
             </div>
+            <div className="col-12 col-mobile">
+              <FormError formError={this.state.formErrors.address} formClass={`msg-${this.fieldErrorClass(this.state.formErrors.address)}`} />
+            </div>
           </div>
           <div className="row">
-            <FormError formError={this.state.formErrors.address} formClass={`col-12 col-md msg-${this.fieldErrorClass(this.state.formErrors.address)}`} />
+            <FormError formError={this.state.formErrors.address} formClass={`col-12 col-md col-web msg-${this.fieldErrorClass(this.state.formErrors.address)}`} />
           </div>
           <div className="row">
             <TextField
@@ -272,6 +281,9 @@ class Form extends Component {
               value={this.state.dob}
               handleUserInput={this.handleUserInput} max="10"
               ref="dob" />
+            <div className="col-12 col-mobile">
+              <FormError formError={this.state.formErrors.dob} formClass={`msg-${this.fieldErrorClass(this.state.formErrors.dob)}`} />
+            </div>
             <TextField
               input="ssn"
               inputName="SSN"
@@ -283,10 +295,13 @@ class Form extends Component {
               value={this.state.ssn}
               handleUserInput={this.handleUserInput} min="11" max="11"
               ref="ssn" />
+            <div className="col-12 col-mobile">
+              <FormError formError={this.state.formErrors.ssn} formClass={`msg-${this.fieldErrorClass(this.state.formErrors.ssn)}`} />
+            </div>
           </div>
           <div className="row">
-            <FormError formError={this.state.formErrors.dob} formClass={`col-12 col-md msg-${this.fieldErrorClass(this.state.formErrors.dob)}`} />
-            <FormError formError={this.state.formErrors.ssn} formClass={`col-12 col-md msg-${this.fieldErrorClass(this.state.formErrors.ssn)}`} />
+            <FormError formError={this.state.formErrors.dob} formClass={`col-12 col-md col-web msg-${this.fieldErrorClass(this.state.formErrors.dob)}`} />
+            <FormError formError={this.state.formErrors.ssn} formClass={`col-12 col-md col-web msg-${this.fieldErrorClass(this.state.formErrors.ssn)}`} />
           </div>
           <div className="d-flex justify-content-center">
             <button type="submit" className="btn btn-secondary btn-submit mt-5" onClick={(event) => this.handleSubmit(event)} disabled={!this.state.formValid}>Submit</button>

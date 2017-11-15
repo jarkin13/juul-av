@@ -7707,6 +7707,18 @@ img {
        -moz-box-shadow: none;
             box-shadow: none; }
 
+.col-mobile {
+  display: block; }
+  @media (min-width: 576px) {
+    .col-mobile {
+      display: none; } }
+
+.col-web {
+  display: none; }
+  @media (min-width: 576px) {
+    .col-web {
+      display: block; } }
+
 .navbar {
   padding: 1.5rem 2.5rem;
   background-color: #e9eef1;
