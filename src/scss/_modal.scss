@@ -24,8 +24,10 @@
     .modal-body {
       color: $gray-300;
       background: #000000;
-      margin-top: -350px;
-      transition: margin .3s linear;
+      @include media-breakpoint-up(sm) {
+        margin-top: -350px;
+        transition: margin .3s linear;
+      }
     }
 
     .container {
@@ -39,8 +41,10 @@
   &.show {
     .modal-content {
       .modal-body {
-        margin-top: -70px;
-        transform: translate(0);
+        @include media-breakpoint-up(sm) {
+          margin-top: -70px;
+          transform: translate(0);
+        }
       }
     }
   }
