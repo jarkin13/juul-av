@@ -7932,6 +7932,9 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
+img {
+  max-width: 100%; }
+
 .form-control:focus, .form-control:active {
   outline: 0;
   -webkit-box-shadow: none;
@@ -7945,5 +7948,36 @@ a.text-dark:focus, a.text-dark:hover {
   width: 100%; }
   .address-input #address {
     width: 100%; }
+
+.modal .modal-dialog {
+  margin: 0;
+  height: 100%; }
+  @media (min-width: 576px) {
+    .modal .modal-dialog {
+      max-width: 100%;
+      margin: 0; } }
+
+.modal .modal-content {
+  height: 100%; }
+  .modal .modal-content .modal-header {
+    height: 70px;
+    padding: 15px;
+    z-index: 999; }
+  .modal .modal-content .modal-body {
+    margin-top: -280px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear; }
+  .modal .modal-content .container {
+    width: 60%; }
+
+.modal.show .modal-content .modal-body {
+  margin-top: -70px;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0); }
 
 /*# sourceMappingURL=app.css.map */

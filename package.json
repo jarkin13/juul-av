@@ -8,7 +8,6 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "watch-js": "gulp watch:js",
     "watch-scss": "gulp watch:scss",
     "start-js": "react-scripts start --verbose",
     "start": "npm-run-all -p watch-scss start-js",
@@ -18,35 +17,24 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "babel-core": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2017": "^6.24.1",
     "bootstrap": "^4.0.0-beta.2",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-eslint": "^4.0.0",
-    "gulp-if": "^2.0.2",
     "gulp-postcss": "^7.0.0",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "jquery": "^3.2.1",
     "npm-run-all": "^4.1.2",
+    "popper.js": "^1.12.8",
     "postcss-reporter": "^5.0.0",
     "postcss-scss": "^1.0.2",
     "prop-types": "^15.6.0",
     "react-places-autocomplete": "^5.4.3",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-includepaths": "^0.2.2",
-    "rollup-plugin-inject": "^2.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
-    "rollup-stream": "^1.24.1",
     "stylelint": "^8.2.0",
     "superagent": "^3.8.1",
-    "uglify-es": "^3.1.9",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "tether": "^1.4.1"
   }
 }

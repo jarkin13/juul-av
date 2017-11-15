@@ -1,0 +1,39 @@
+.modal {
+  .modal-dialog {
+    margin: 0;
+    height: 100%;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .modal-content {
+    height: 100%;
+
+    .modal-header {
+      height: 70px;
+      padding: 15px;
+      z-index: 999;
+    }
+
+    .modal-body {
+      margin-top: -280px;
+      transition: all .3s linear;
+    }
+
+    .container {
+      width: 60%;
+    }
+  }
+
+  &.show {
+    .modal-content {
+      .modal-body {
+        margin-top: -70px;
+        transform: translateX(0);
+      }
+    }
+  }
+}

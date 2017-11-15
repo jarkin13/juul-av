@@ -170,6 +170,7 @@ class Form extends Component {
 
     return (
       <div className="container">
+        <h1 className="text-center">Create an Account</h1>
         <form id="becomeLeader">
           <div className="row">
             <TextField
@@ -178,7 +179,6 @@ class Form extends Component {
               type="text"
               groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.first)}`}
               id="first"
-              placeholder="First Name"
               value={this.state.first}
               handleUserInput={this.handleUserInput}
               ref="first" />
@@ -187,7 +187,6 @@ class Form extends Component {
               inputName="Last Name"
               type="text" groupClass={`col-12 col-md ${this.errorClass(this.state.formErrors.last)}`}
               id="last"
-              placeholder="Last Name"
               value={this.state.last}
               handleUserInput={this.handleUserInput}
               ref="last" />
